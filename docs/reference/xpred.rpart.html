@@ -23,6 +23,12 @@
       <ul class="navbar-nav me-auto"><li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/my-vignette.html">Example</a>
+  </div>
+</li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
 
@@ -108,12 +114,12 @@
 <span class="r-in"><span><span class="va">xerr</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="va">xmat</span> <span class="op">-</span> <span class="va">car.test.frame</span><span class="op">$</span><span class="va">Mileage</span><span class="op">)</span><span class="op">^</span><span class="fl">2</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/apply.html" class="external-link">apply</a></span><span class="op">(</span><span class="va">xerr</span>, <span class="fl">2</span>, <span class="va">sum</span><span class="op">)</span>   <span class="co"># cross-validated error estimate</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 0.79767456 0.28300396 0.04154257 0.01132626 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  1393.8539   806.7188   574.4650   551.6764 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  1400.1091   753.2438   584.4853   583.3211 </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># approx same result as rel. error from printcp(fit)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/apply.html" class="external-link">apply</a></span><span class="op">(</span><span class="va">xerr</span>, <span class="fl">2</span>, <span class="va">sum</span><span class="op">)</span><span class="op">/</span><span class="fu"><a href="https://rdrr.io/r/stats/cor.html" class="external-link">var</a></span><span class="op">(</span><span class="va">car.test.frame</span><span class="op">$</span><span class="va">Mileage</span><span class="op">)</span> </span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 0.79767456 0.28300396 0.04154257 0.01132626 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   60.71046   35.13730   25.02130   24.02873 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   60.98291   32.80816   25.45774   25.40703 </span>
 <span class="r-in"><span><span class="fu"><a href="printcp.html">printcp</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Regression tree:</span>
@@ -127,10 +133,10 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> n= 60 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         CP nsplit rel error  xerror     xstd</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.595349      0   1.00000 1.02097 0.174873</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.134528      1   0.40465 0.63193 0.110721</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 0.012828      2   0.27012 0.47149 0.084570</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 0.010000      3   0.25729 0.47343 0.084295</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.595349      0   1.00000 1.04371 0.180083</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.134528      1   0.40465 0.63035 0.107626</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 0.012828      2   0.27012 0.47032 0.082494</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 0.010000      3   0.25729 0.46749 0.076084</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

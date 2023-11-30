@@ -21,6 +21,12 @@
       <ul class="navbar-nav me-auto"><li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/my-vignette.html">Example</a>
+  </div>
+</li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
 
@@ -409,17 +415,17 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> node), split, n, loss, yval, (yprob)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       * denotes terminal node</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1) root 75 50 setosa (0.3333333 0.3333333 0.3333333)  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2) Petal.Length&lt; 2.45 25  0 setosa (1.0000000 0.0000000 0.0000000) *</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   3) Petal.Length&gt;=2.45 50 25 versicolor (0.0000000 0.5000000 0.5000000)  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     6) Petal.Width&lt; 1.75 28  3 versicolor (0.0000000 0.8928571 0.1071429) *</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     7) Petal.Width&gt;=1.75 22  0 virginica (0.0000000 0.0000000 1.0000000) *</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1) root 75 50 setosa (0.33333333 0.33333333 0.33333333)  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2) Petal.Length&lt; 2.6 25  0 setosa (1.00000000 0.00000000 0.00000000) *</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   3) Petal.Length&gt;=2.6 50 25 versicolor (0.00000000 0.50000000 0.50000000)  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     6) Petal.Length&lt; 4.85 24  0 versicolor (0.00000000 1.00000000 0.00000000) *</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     7) Petal.Length&gt;=4.85 26  1 virginica (0.00000000 0.03846154 0.96153846) *</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/table.html" class="external-link">table</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/predict.html" class="external-link">predict</a></span><span class="op">(</span><span class="va">fit</span>, <span class="va">iris</span><span class="op">[</span><span class="op">-</span><span class="va">sub</span>,<span class="op">]</span>, type <span class="op">=</span> <span class="st">"class"</span><span class="op">)</span>, <span class="va">iris</span><span class="op">[</span><span class="op">-</span><span class="va">sub</span>, <span class="st">"Species"</span><span class="op">]</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>             </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>              setosa versicolor virginica</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   setosa         25          0         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   versicolor      0         24         2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   virginica       0          1        23</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   versicolor      0         22         3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   virginica       0          3        22</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

@@ -21,6 +21,12 @@
       <ul class="navbar-nav me-auto"><li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/my-vignette.html">Example</a>
+  </div>
+</li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
 
@@ -97,10 +103,10 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span>   n= 60 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>           CP nsplit rel error    xerror       xstd</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.59534912      0 1.0000000 1.0392077 0.17925876</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.13452819      1 0.4046509 0.4953358 0.07473638</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 0.01282843      2 0.2701227 0.3795883 0.06599992</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 0.01000000      3 0.2572943 0.3839280 0.06564961</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.59534912      0 1.0000000 1.0449222 0.17829922</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.13452819      1 0.4046509 0.5518427 0.10257281</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 0.01282843      2 0.2701227 0.4081409 0.07772341</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 0.01000000      3 0.2572943 0.4134246 0.07765008</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Variable importance</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Weight </span>
@@ -143,10 +149,10 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> rpart(formula = Kyphosis ~ Age + Number + Start, data = kyphosis)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   n= 81 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           CP nsplit rel error    xerror      xstd</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.17647059      0 1.0000000 1.0000000 0.2155872</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.01960784      1 0.8235294 0.8823529 0.2056488</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 0.01000000      4 0.7647059 0.8823529 0.2056488</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           CP nsplit rel error   xerror      xstd</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.17647059      0 1.0000000 1.000000 0.2155872</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.01960784      1 0.8235294 1.058824 0.2200975</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 0.01000000      4 0.7647059 1.058824 0.2200975</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Variable importance</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  Start    Age Number </span>
