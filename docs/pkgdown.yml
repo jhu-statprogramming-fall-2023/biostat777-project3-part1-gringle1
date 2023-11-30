@@ -1,6 +1,7 @@
 pandoc: 3.1.1
 pkgdown: 2.0.7
 pkgdown_sha: ~
-articles: {}
-last_built: 2023-11-30T19:31Z
+articles:
+  my-vignette: my-vignette.html
+last_built: 2023-11-30T21:33Z
 
