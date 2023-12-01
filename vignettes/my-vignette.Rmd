@@ -71,6 +71,8 @@ freedom %>% pull(country) %>% unique() %>% length()
 freedom %>% pull(Region_Name) %>% unique()
 ```
 
+## Data exploration
+
 Plotting country freedom status, we can see that many countries in North America, Europe, South and western South America, Southern Africa, and Australia are classified as "Free". Many African, west Asian, and eastern European counties are classified "Not free". 
 
 ```{r,class.source = 'fold-hide'}
@@ -126,7 +128,7 @@ distinct(world_map, region,Status) %>%
 ```
 
 
-Plotting the distribution of the political freedom ranking and civil liberties rankings as well as the average of the two, we see that freedom status is almost entirely determined by the average of the two. 
+Plotting the distribution of the political freedom ranking and civil liberties rankings as well as the average of the two, we see that freedom status is almost entirely determined by the average of the two. Higher scores on these measures correspond to less "Freedom".
 
 ```{r class.source = 'fold-hide'}
 
@@ -145,30 +147,38 @@ df %>%
                        breaks=c("F","PF","NF"),
                        labels=c("Free","Partially Free","Not free"))
 ```
+## Using `rpart`
+
+### Initial model 
 
 Now we use `rpart` to fit a classification tree using CL and PR as predictors. 
 ```{r}
 rpart_mod <- rpart(method = "class",Status~ CL + PR + PR_CL, data=df)
 ```
 
-We can use the `plot` method to visualize the tree, and see that indeed the two splits correspond to what we see in the data above.
+We can use the `plot` method to visualize the tree, and see that indeed the two splits correspond to what we see in the data above. Note that the average will be in 0.5 units ranging from 0.5 to 7, as the two scores are integers 1-7. Our model is the following: when the average of political freedom and civil liberties is between 0.5-2.5, the country is classified as "Free". When is 3-5, they are classified as "Partially free". When it is 5.5 or greater, they are classified as "Not free"
+
 ```{r}
 plot(rpart_mod,margin=.05)
 text(rpart_mod)
 ```
 
-Finally we can check our model by plotting the data with the decision boundaries as fit by the rpart model. We can also get the predicted status from the rpart model using the predict function. 
+Finally we can visualize our model by plotting the data with the decision boundaries as fit by the rpart model, which are based entirely on the average of PR and CL. For example, the points with $\frac{(CL + PR)}/{2} < 2.75$ is  We can also get the predicted status from the rpart model using the predict function. 
 
 ```{r class.source = 'fold-hide' }
-library(patchwork)
+
 df %>% 
   group_by(CL,PR,Status) %>%
   summarize(N=n()) %>%
   ggplot() + 
   geom_point(aes(x=CL,y=PR,colour=Status,size = N),alpha=.5) +
   theme_bw() + 
-  geom_abline(intercept=2*2.75,slope=-1) + 
-  geom_abline(intercept=2*5.25,slope=-1) + 
+  geom_abline(intercept=2*2.75,slope=-1,linetype="dashed") + 
+  geom_abline(intercept=2*5.25,slope=-1,linetype="dotted") + 
+  ylab("Political freedom (PR)") +
+  xlab("Civil liberties (CL)") + 
+  labs(title="Freedom status by PR and CL",subtitle="with rpart decision boundaries",
+       caption=str_wrap("Below the dashed line: classified by the model as free; above the dotted line: not free; in-between:partially free.")) + 
   scale_colour_viridis_d(direction = -1,
                        end=.8,
                        option = "plasma",
@@ -178,7 +188,9 @@ df %>%
 
 ```
 
-From this analysis we can confirm that the freedom status is based primarily on the average of the political and civil liberty scores. We have an accuracy of 99.6% with only 21 missclassified counties.
+From this analysis we can confirm that the freedom status is based primarily on the average of the political and civil liberty scores. We can get the predictions from the model using `predict.rpart` and see that we have an accuracy of 99.6% with only 21 missclassified counties.
+
+### Stratified by year
 
 However, as the model is not entirely perfect, it is possible that additional predictors are used or that the models may have differed over time. We will try fitting rpart trees stratified by year.
 

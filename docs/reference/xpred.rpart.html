@@ -114,12 +114,12 @@
 <span class="r-in"><span><span class="va">xerr</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="va">xmat</span> <span class="op">-</span> <span class="va">car.test.frame</span><span class="op">$</span><span class="va">Mileage</span><span class="op">)</span><span class="op">^</span><span class="fl">2</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/apply.html" class="external-link">apply</a></span><span class="op">(</span><span class="va">xerr</span>, <span class="fl">2</span>, <span class="va">sum</span><span class="op">)</span>   <span class="co"># cross-validated error estimate</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 0.79767456 0.28300396 0.04154257 0.01132626 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  1457.8128   774.9262   566.8180   600.6079 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  1394.4012   731.7159   531.7882   516.6490 </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># approx same result as rel. error from printcp(fit)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/apply.html" class="external-link">apply</a></span><span class="op">(</span><span class="va">xerr</span>, <span class="fl">2</span>, <span class="va">sum</span><span class="op">)</span><span class="op">/</span><span class="fu"><a href="https://rdrr.io/r/stats/cor.html" class="external-link">var</a></span><span class="op">(</span><span class="va">car.test.frame</span><span class="op">$</span><span class="va">Mileage</span><span class="op">)</span> </span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 0.79767456 0.28300396 0.04154257 0.01132626 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   63.49624   33.75255   24.68823   26.15998 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   60.73430   31.87049   23.16248   22.50308 </span>
 <span class="r-in"><span><span class="fu"><a href="printcp.html">printcp</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Regression tree:</span>
@@ -133,10 +133,10 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> n= 60 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         CP nsplit rel error  xerror     xstd</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.595349      0   1.00000 1.03419 0.177825</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.134528      1   0.40465 0.50676 0.072848</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 0.012828      2   0.27012 0.38078 0.062860</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 0.010000      3   0.25729 0.38328 0.062221</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.595349      0   1.00000 1.03984 0.181451</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.134528      1   0.40465 0.58096 0.093322</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 0.012828      2   0.27012 0.46203 0.086853</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 0.010000      3   0.25729 0.46563 0.086794</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
