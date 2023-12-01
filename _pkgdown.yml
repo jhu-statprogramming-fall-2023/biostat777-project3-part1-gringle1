@@ -16,3 +16,6 @@ footer:
 home:
   sidebar:
     structure: [links, community, citation, authors, dev, license]
+navbar:
+  structure:
+    right: [articles]

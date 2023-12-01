@@ -30,11 +30,11 @@
       </ul><form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
 
-      <ul class="navbar-nav"><li class="nav-item">
-  <a class="external-link nav-link" href="https://github.com/bethatkinson/rpart/" aria-label="github">
-    <span class="fab fa fab fa-github fa-lg"></span>
-     
-  </a>
+      <ul class="navbar-nav"><li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/my-vignette.html">Example Analysis</a>
+  </div>
 </li>
       </ul></div>
 
@@ -103,10 +103,10 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span>   n= 60 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>           CP nsplit rel error    xerror       xstd</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.59534912      0 1.0000000 1.0396695 0.18068428</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.13452819      1 0.4046509 0.5974279 0.10455862</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 0.01282843      2 0.2701227 0.4384295 0.08143612</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 0.01000000      3 0.2572943 0.4388922 0.07409167</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.59534912      0 1.0000000 1.0188318 0.17558761</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.13452819      1 0.4046509 0.4984884 0.07346174</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 0.01282843      2 0.2701227 0.3946296 0.06558247</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 0.01000000      3 0.2572943 0.3928012 0.06563756</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Variable importance</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Weight </span>
@@ -149,10 +149,10 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> rpart(formula = Kyphosis ~ Age + Number + Start, data = kyphosis)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   n= 81 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           CP nsplit rel error   xerror      xstd</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.17647059      0 1.0000000 1.000000 0.2155872</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.01960784      1 0.8235294 1.176471 0.2282908</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 0.01000000      4 0.7647059 1.176471 0.2282908</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           CP nsplit rel error    xerror      xstd</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.17647059      0 1.0000000 1.0000000 0.2155872</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 0.01960784      1 0.8235294 0.9411765 0.2107780</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 0.01000000      4 0.7647059 1.0000000 0.2155872</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Variable importance</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  Start    Age Number </span>
