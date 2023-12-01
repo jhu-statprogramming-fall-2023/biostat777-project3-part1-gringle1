@@ -1,10 +1,18 @@
 url: ~
 template:
   bootstrap: 5
-  bslib:
-    bg: "#202123"
-    fg: "#B8BCC2"
-    primary: "#306cc9"
-    theme: arrow-dark
-    #heading_font: {google: "Roboto Slab"}
+  bootswatch: united
 
+  bslib:
+    code-color: "#1E90FF"
+    link-color: "#32CD32"
+    dark: "#800000"
+footer:
+  structure:
+    right: [built_with,student]
+    left: [developed_by]
+  components:
+    student: Website build and example analysis by Grace Ringlein.
+home:
+  sidebar:
+    structure: [links, community, citation, authors, dev, license]
