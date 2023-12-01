@@ -5,11 +5,11 @@
 [![Downloads](http://cranlogs.r-pkg.org/badges/rpart)](https://CRAN.R-project.org/package=rpart)
 
 
-`rpart` github: https://github.com/bethatkinson/rpart
+# Notes for jhu-statprogramming-fall-2023
 
 Link to pckdown website: https://jhu-statprogramming-fall-2023.github.io/biostat777-project3-part1-gringle1/
 
-Customizations: 
+Customizations to pckdown website: 
 
 - changed theme
 - changed code text color
@@ -17,7 +17,9 @@ Customizations:
 - changed link color
 - reordered side bar
 
+`rpart` github: https://github.com/bethatkinson/rpart
 
+# Original `rpart` readme
 
 This is the source code for the  `rpart` package, which is a recommended package in R.
 It gets posted to the comprehensive R archive (CRAN) as needed after undergoing a thorough testing.
