@@ -26,7 +26,7 @@ Data and data dictionary are available at https://github.com/rfordatascience/tid
 
 First we load the rpart package. 
 
-If rpart is not installed, install via:  
+If `rpart` is not installed, install via:  
 
 ```{r eval=FALSE}
 install.packages("rpart")
@@ -146,12 +146,12 @@ df %>%
                        labels=c("Free","Partially Free","Not free"))
 ```
 
-Now we use **rpart** to fit a classification tree using CL and PR as predictors. 
+Now we use `rpart` to fit a classification tree using CL and PR as predictors. 
 ```{r}
 rpart_mod <- rpart(method = "class",Status~ CL + PR + PR_CL, data=df)
 ```
 
-We can use the *plot* method to visualize the tree, and see that indeed the two splits correspond to what we see in the data above.
+We can use the `plot` method to visualize the tree, and see that indeed the two splits correspond to what we see in the data above.
 ```{r}
 plot(rpart_mod,margin=.05)
 text(rpart_mod)
@@ -210,7 +210,7 @@ two functions from purrr:
 - map_dbl. 
 
 
-rpart functions:  
+`rpart` functions:  
 
 - rpart. 
 
